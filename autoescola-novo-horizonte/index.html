@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auto Escola Novo Horizonte | Maringá</title>
+<meta name="description" content="Auto Escola Novo Horizonte em Maringá – Categoria A e B, carro automático, reciclagem para CNH suspensa ou cassada. Conquiste sua CNH com quem aprova de verdade!">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --orange:#F07B1A;
+    --orange-2:#FF9636;
+    --orange-dark:#C85F0C;
+    --ink:#161616;
+    --ink-2:#1F1F1F;
+    --ink-3:#2A2A2A;
+    --paper:#FFFFFF;
+    --paper-2:#F6F4F1;
+    --text:#1B1B1B;
+    --muted:#5E5E5E;
+    --line:#E7E2DC;
+    --radius:18px;
+    --shadow:0 18px 40px -18px rgba(0,0,0,.35);
+    --wa:#25D366;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{font-family:'Montserrat',system-ui,sans-serif;color:var(--text);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .container{width:min(1180px,100% - 32px);margin-inline:auto}
+  section{padding:96px 0}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
+  .eyebrow::before{content:"";width:28px;height:3px;border-radius:3px;background:var(--orange)}
+  h1,h2,h3{line-height:1.15;font-weight:800;letter-spacing:-.01em}
+  h2{font-size:clamp(1.8rem,3.6vw,2.7rem);margin:14px 0 16px}
+  h2 em{font-style:normal;color:var(--orange)}
+  .lead{color:var(--muted);font-size:1.05rem;max-width:620px}
+  .section-head{margin-bottom:52px}
+  .section-head.center{text-align:center}
+  .section-head.center .lead{margin-inline:auto}
+  .section-head.center .eyebrow::after{content:"";width:28px;height:3px;border-radius:3px;background:var(--orange)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;font-size:.95rem;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;border:2px solid transparent}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn-primary{background:var(--orange);color:#fff;box-shadow:0 10px 24px -8px rgba(240,123,26,.7)}
+  .btn-primary:hover{background:var(--orange-2);transform:translateY(-2px)}
+  .btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark:hover{background:#000;transform:translateY(-2px)}
+
+  /* ---------- HEADER ---------- */
+  .topbar{background:var(--orange);color:#fff;font-size:.82rem;font-weight:600}
+  .topbar .container{display:flex;justify-content:space-between;gap:16px;padding:8px 0;flex-wrap:wrap}
+  .topbar span{display:inline-flex;align-items:center;gap:6px}
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(22,22,22,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+  .nav .container{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff}
+  .brand img{width:50px;height:50px}
+  .brand b{display:block;font-size:1.02rem;font-weight:800;letter-spacing:.02em}
+  .brand small{display:block;font-size:.66rem;letter-spacing:.24em;color:var(--orange);font-weight:700}
+  .menu{display:flex;align-items:center;gap:30px}
+  .menu a{color:#d9d9d9;font-weight:600;font-size:.9rem;position:relative}
+  .menu a:not(.btn):hover{color:#fff}
+  .menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--orange);transition:width .25s}
+  .menu a:not(.btn):hover::after{width:100%}
+  .menu .btn{padding:11px 20px;font-size:.86rem;color:#fff}
+  .burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+  .burger span{display:block;width:24px;height:2px;background:#fff;margin:5px auto;transition:.3s}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;background:var(--ink);color:#fff;overflow:hidden;padding:110px 0 130px}
+  .hero::before{content:"";position:absolute;width:900px;height:900px;border-radius:50%;right:-320px;top:-260px;border:70px solid rgba(240,123,26,.10);box-shadow:0 0 0 30px rgba(240,123,26,.05)}
+  .hero::after{content:"";position:absolute;left:-10%;right:-10%;bottom:-120px;height:240px;background:var(--paper);border-radius:50% 50% 0 0/100% 100% 0 0}
+  .hero .container{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+  .hero h1{font-size:clamp(2.3rem,5.4vw,4rem);font-weight:900;margin:18px 0 22px}
+  .hero h1 span{color:var(--orange)}
+  .hero p.lead{color:#bdbdbd;font-size:1.12rem}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+  .hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+  .tag{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:.82rem;font-weight:600;color:#e6e6e6}
+  .tag i{width:8px;height:8px;border-radius:50%;background:var(--orange)}
+  .hero-visual{position:relative;display:grid;place-items:center}
+  .hero-visual .ring{position:absolute;inset:-6%;border-radius:50%;border:2px dashed rgba(240,123,26,.35);animation:spin 40s linear infinite}
+  .hero-visual img{width:min(420px,100%);filter:drop-shadow(0 30px 50px rgba(0,0,0,.6))}
+  .float-card{position:absolute;background:#fff;color:var(--text);border-radius:14px;padding:12px 16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;font-size:.82rem;font-weight:600;animation:bob 5s ease-in-out infinite}
+  .float-card .ic{width:38px;height:38px;border-radius:10px;background:var(--orange);display:grid;place-items:center;color:#fff}
+  .float-card .ic svg{width:20px;height:20px}
+  .float-card b{display:block;font-size:.95rem}
+  .float-card small{color:var(--muted);font-weight:500}
+  .fc-1{left:-6%;bottom:12%}
+  .fc-2{right:-4%;top:8%;animation-delay:-2.5s}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes bob{50%{transform:translateY(-10px)}}
+
+  /* ---------- STATS ---------- */
+  .stats{padding:0;margin-top:-40px;position:relative;z-index:3}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:var(--radius);box-shadow:0 24px 60px -24px rgba(0,0,0,.25);border:1px solid var(--line);overflow:hidden}
+  .stat{padding:30px 24px;text-align:center;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:0}
+  .stat b{display:block;font-size:2.1rem;font-weight:900;color:var(--orange);line-height:1}
+  .stat span{display:block;margin-top:8px;font-size:.86rem;color:var(--muted);font-weight:600}
+
+  /* ---------- SOBRE ---------- */
+  .about .container{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+  .about-visual{position:relative;aspect-ratio:1/1;border-radius:28px;background:linear-gradient(145deg,var(--ink) 0%,var(--ink-3) 100%);overflow:hidden;display:grid;place-items:center}
+  .about-visual::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 46%,rgba(255,255,255,.9) 46% 54%,transparent 54% 100%) center/100% 70px no-repeat;opacity:.0}
+  .road{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:70%;height:65%;background:#2f2f2f;clip-path:polygon(38% 0,62% 0,100% 100%,0 100%)}
+  .road::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:6%;transform:translateX(-50%);background:repeating-linear-gradient(180deg,#F07B1A 0 26px,transparent 26px 52px)}
+  .sun{position:absolute;top:18%;width:46%;aspect-ratio:2/1;border-radius:999px 999px 0 0;background:linear-gradient(180deg,var(--orange-2),var(--orange));box-shadow:0 0 80px rgba(240,123,26,.55)}
+  .horizon-line{position:absolute;top:calc(18% + 23%);left:8%;right:8%;height:3px;background:#fff;border-radius:3px}
+  .about-badge{position:absolute;right:20px;top:20px;background:#fff;border-radius:16px;padding:14px 18px;text-align:center;box-shadow:var(--shadow)}
+  .about-badge b{display:block;font-size:1.7rem;color:var(--orange);font-weight:900;line-height:1}
+  .about-badge small{font-size:.72rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  .checklist{list-style:none;display:grid;gap:14px;margin:28px 0 34px}
+  .checklist li{display:flex;gap:14px;align-items:flex-start;font-weight:500}
+  .checklist li::before{content:"";flex:none;width:24px;height:24px;margin-top:1px;border-radius:50%;background:var(--orange) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/14px no-repeat}
+
+  /* ---------- SERVIÇOS ---------- */
+  .services{background:var(--paper-2)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;position:relative;transition:transform .25s,box-shadow .25s,border-color .25s;overflow:hidden}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+  .card::after{content:"";position:absolute;left:0;top:0;height:4px;width:0;background:var(--orange);transition:width .35s}
+  .card:hover::after{width:100%}
+  .card .icon{width:58px;height:58px;border-radius:16px;background:rgba(240,123,26,.12);color:var(--orange);display:grid;place-items:center;margin-bottom:22px}
+  .card .icon svg{width:30px;height:30px}
+  .card h3{font-size:1.2rem;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:.95rem}
+  .card .pill{position:absolute;top:24px;right:24px;font-size:.7rem;font-weight:800;letter-spacing:.08em;background:var(--ink);color:#fff;padding:5px 10px;border-radius:999px}
+  .card a.more{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:700;font-size:.88rem;color:var(--orange)}
+  .card a.more:hover{gap:10px}
+
+  /* ---------- AUTOMÁTICO ---------- */
+  .auto{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+  .auto::before{content:"";position:absolute;right:-200px;bottom:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(240,123,26,.25),transparent 65%)}
+  .auto .container{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative}
+  .auto .lead{color:#bdbdbd}
+  .auto-features{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:30px 0 34px}
+  .af{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:18px}
+  .af b{display:block;color:var(--orange);font-size:.95rem;margin-bottom:4px}
+  .af span{font-size:.86rem;color:#c9c9c9}
+  .car-art{position:relative;aspect-ratio:4/3;display:grid;place-items:center}
+  .car-art svg{width:100%;height:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.5))}
+  .big-word{position:absolute;top:4%;left:0;right:0;text-align:center;font-size:clamp(3rem,8vw,6.5rem);font-weight:900;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.12);letter-spacing:.04em;line-height:1}
+
+  /* ---------- ETAPAS ---------- */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s;position:relative}
+  .steps::before{content:"";position:absolute;top:34px;left:12%;right:12%;height:2px;background:repeating-linear-gradient(90deg,var(--orange) 0 12px,transparent 12px 22px)}
+  .step{text-align:center;position:relative}
+  .step .num{width:68px;height:68px;margin:0 auto 20px;border-radius:50%;background:#fff;border:3px solid var(--orange);display:grid;place-items:center;font-size:1.4rem;font-weight:900;color:var(--orange);position:relative;z-index:1;transition:.25s}
+  .step:hover .num{background:var(--orange);color:#fff}
+  .step h3{font-size:1.08rem;margin-bottom:8px}
+  .step p{color:var(--muted);font-size:.92rem;max-width:240px;margin-inline:auto}
+
+  /* ---------- CNH SUSPENSA ---------- */
+  .suspensa{padding:0}
+  .suspensa-box{background:linear-gradient(120deg,var(--orange) 0%,var(--orange-dark) 100%);border-radius:28px;color:#fff;padding:60px;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+  .suspensa-box::before{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;border:50px solid rgba(255,255,255,.08)}
+  .suspensa-box .eyebrow{color:#fff}
+  .suspensa-box .eyebrow::before{background:#fff}
+  .suspensa-box h2{color:#fff}
+  .suspensa-box p{color:rgba(255,255,255,.88);max-width:560px}
+  .suspensa-list{list-style:none;display:grid;gap:12px;position:relative}
+  .suspensa-list li{background:rgba(0,0,0,.18);border-radius:12px;padding:14px 18px;font-weight:600;font-size:.92rem;display:flex;gap:10px;align-items:center}
+  .suspensa-list li::before{content:"✓";width:22px;height:22px;flex:none;border-radius:50%;background:#fff;color:var(--orange-dark);display:grid;place-items:center;font-size:.8rem;font-weight:900}
+  .suspensa-box .btn-dark{margin-top:28px}
+
+  /* ---------- DIFERENCIAIS ---------- */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .why{display:flex;gap:18px;padding:26px;border-radius:var(--radius);border:1px solid var(--line);background:#fff;transition:.25s}
+  .why:hover{border-color:var(--orange);box-shadow:0 12px 30px -18px rgba(240,123,26,.6)}
+  .why .icon{flex:none;width:50px;height:50px;border-radius:14px;background:var(--ink);color:var(--orange);display:grid;place-items:center}
+  .why .icon svg{width:24px;height:24px}
+  .why h3{font-size:1.02rem;margin-bottom:6px}
+  .why p{color:var(--muted);font-size:.9rem}
+
+  /* ---------- APROVADOS ---------- */
+  .approved{background:var(--paper-2)}
+  .approved .container{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+  .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .ig-tile{aspect-ratio:1/1;border-radius:14px;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;color:#fff;font-weight:800;font-size:.9rem;line-height:1.2;position:relative;overflow:hidden;transition:transform .25s}
+  .ig-tile:hover{transform:scale(1.03)}
+  .ig-tile small{font-weight:600;font-size:.7rem;opacity:.85}
+  .ig-tile .script{font-family:'Brush Script MT','Segoe Script',cursive;font-weight:400;font-size:1.7rem;position:absolute;top:12px;left:14px}
+  .t1{background:linear-gradient(160deg,#2b2b2b,#111)}
+  .t2{background:linear-gradient(160deg,var(--orange-2),var(--orange-dark))}
+  .t3{background:linear-gradient(160deg,#3a3a3a,#1c1c1c)}
+  .t4{background:linear-gradient(160deg,#1c1c1c,#2e2e2e)}
+  .t5{background:linear-gradient(160deg,#111,#2b2b2b);border:2px solid var(--orange)}
+  .t6{background:linear-gradient(160deg,var(--orange),#a84c06)}
+  .ig-tile .t-num{font-size:1.9rem;font-weight:900;line-height:1}
+  .ig-handle{display:flex;align-items:center;gap:14px;margin:26px 0 30px;padding:16px 18px;background:#fff;border-radius:16px;border:1px solid var(--line)}
+  .ig-handle .av{width:52px;height:52px;border-radius:50%;padding:3px;background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)}
+  .ig-handle .av img{width:100%;height:100%;border-radius:50%;background:#fff}
+  .ig-handle b{display:block}
+  .ig-handle small{color:var(--muted);font-weight:500}
+
+  /* ---------- FAQ ---------- */
+  .faq .container{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+  .faq-list{display:grid;gap:14px}
+  details{border:1px solid var(--line);border-radius:14px;background:#fff;transition:.2s}
+  details[open]{border-color:var(--orange);box-shadow:0 12px 30px -20px rgba(240,123,26,.6)}
+  summary{list-style:none;cursor:pointer;padding:20px 22px;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;background:var(--paper-2);display:grid;place-items:center;font-size:1.2rem;color:var(--orange);transition:.25s}
+  details[open] summary::after{content:"–";background:var(--orange);color:#fff}
+  details p{padding:0 22px 22px;color:var(--muted);font-size:.95rem}
+
+  /* ---------- CONTATO ---------- */
+  .contact{background:var(--ink);color:#fff}
+  .contact .container{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+  .contact .lead{color:#bdbdbd}
+  .contact-items{display:grid;gap:14px;margin:30px 0}
+  .ci{display:flex;gap:16px;align-items:center;padding:18px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:.2s}
+  a.ci:hover{border-color:var(--orange);background:rgba(240,123,26,.08)}
+  .ci .icon{flex:none;width:48px;height:48px;border-radius:12px;background:var(--orange);display:grid;place-items:center}
+  .ci .icon svg{width:22px;height:22px;color:#fff}
+  .ci small{display:block;color:#9e9e9e;font-size:.76rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+  .ci b{font-size:1rem}
+  .form{background:#fff;color:var(--text);border-radius:22px;padding:36px}
+  .form h3{font-size:1.4rem;margin-bottom:6px}
+  .form > p{color:var(--muted);font-size:.92rem;margin-bottom:22px}
+  .field{display:grid;gap:6px;margin-bottom:16px}
+  .field label{font-size:.82rem;font-weight:700}
+  .field input,.field select{font:inherit;padding:14px 16px;border-radius:12px;border:1.5px solid var(--line);background:var(--paper-2);outline:none;transition:.2s;width:100%}
+  .field input:focus,.field select:focus{border-color:var(--orange);background:#fff}
+  .form .btn{width:100%;margin-top:6px;background:var(--wa);box-shadow:0 10px 24px -10px rgba(37,211,102,.8);color:#fff}
+  .form .btn:hover{filter:brightness(1.05);transform:translateY(-2px)}
+  .map{grid-column:1/-1;border-radius:22px;overflow:hidden;height:340px;border:1px solid rgba(255,255,255,.1)}
+  .map iframe{width:100%;height:100%;border:0;filter:grayscale(.3) contrast(1.05)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#0e0e0e;color:#9a9a9a;padding:60px 0 28px;font-size:.9rem}
+  .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .foot h4{color:#fff;font-size:.95rem;margin-bottom:16px}
+  .foot ul{list-style:none;display:grid;gap:10px}
+  .foot a:hover{color:var(--orange)}
+  .foot .brand{margin-bottom:16px}
+  .socials{display:flex;gap:10px;margin-top:20px}
+  .socials a{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.06);display:grid;place-items:center;color:#fff;transition:.2s}
+  .socials a:hover{background:var(--orange);color:#fff}
+  .socials svg{width:20px;height:20px}
+  .copy{padding-top:24px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.8rem}
+
+  /* ---------- WHATSAPP FLOAT ---------- */
+  .wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:62px;height:62px;border-radius:50%;background:var(--wa);display:grid;place-items:center;color:#fff;box-shadow:0 12px 28px -6px rgba(37,211,102,.7)}
+  .wa-float svg{width:32px;height:32px}
+  .wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--wa);animation:pulse 2.2s infinite;z-index:-1}
+  @keyframes pulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.7);opacity:0}}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:1000px){
+    .hero .container,.about .container,.auto .container,.approved .container,.faq .container,.contact .container{grid-template-columns:1fr}
+    .hero-visual{order:-1}
+    .hero-visual img{width:min(300px,80%)}
+    .cards,.why-grid{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr 1fr;row-gap:44px}
+    .steps::before{display:none}
+    .suspensa-box{grid-template-columns:1fr;padding:44px 32px}
+    .foot{grid-template-columns:1fr 1fr}
+    .about-visual{max-width:520px}
+  }
+  @media (max-width:860px){
+    .burger{display:block}
+    .menu{position:fixed;inset:76px 0 auto 0;background:var(--ink);flex-direction:column;align-items:stretch;gap:0;padding:12px 16px 24px;transform:translateY(-130%);transition:transform .35s;border-bottom:1px solid rgba(255,255,255,.08)}
+    .menu.open{transform:none}
+    .menu a:not(.btn){padding:14px 4px;border-bottom:1px solid rgba(255,255,255,.06)}
+    .menu a:not(.btn)::after{display:none}
+    .menu .btn{margin-top:16px}
+    .nav.open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav.open .burger span:nth-child(2){opacity:0}
+    .nav.open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  }
+  @media (max-width:640px){
+    section{padding:72px 0}
+    .topbar .hide-sm{display:none}
+    .hero{padding:70px 0 110px}
+    .stats-grid{grid-template-columns:1fr 1fr}
+    .stat:nth-child(2){border-right:0}
+    .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+    .cards,.why-grid,.steps,.auto-features,.foot{grid-template-columns:1fr}
+    .float-card{display:none}
+    .hero{padding-bottom:150px}
+    .hero::after{height:110px;bottom:-60px}
+    .stat b{font-size:1.5rem}
+    .form{padding:26px 20px}
+    .suspensa-box{padding:36px 22px;border-radius:22px}
+    .hero-ctas .btn{width:100%}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= TOPBAR ================= -->
+<div class="topbar">
+  <div class="container">
+    <span>📍 Av. Pedro Taques · Jardim Alvorada · Maringá – PR</span>
+    <span class="hide-sm">📞 (44) 3034-8833 &nbsp;·&nbsp; 📱 (44) 99146-8415</span>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="nav" id="nav">
+  <div class="container">
+    <a href="#inicio" class="brand" aria-label="Auto Escola Novo Horizonte – início">
+      <img src="assets/logo.png" alt="Logo Auto Escola Novo Horizonte">
+      <span><b>NOVO HORIZONTE</b><small>AUTO ESCOLA</small></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#aprovados">Aprovados</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#contato">Contato</a>
+      <a class="btn btn-primary" href="https://wa.me/5544991468415?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20CNH." target="_blank" rel="noopener">Matricule-se</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="container">
+    <div>
+      <span class="eyebrow">Auto Escola em Maringá</span>
+      <h1>Conquiste sua CNH com quem <span>aprova de verdade!</span></h1>
+      <p class="lead">Aulas práticas e teóricas para Categoria A e B, instrutores experientes, frota moderna com carro automático e todo o suporte do primeiro dia até a aprovação.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://wa.me/5544991468415?text=Ol%C3%A1!%20Quero%20fazer%20minha%20matr%C3%ADcula." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg>
+          Fale pelo WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#servicos">Conheça os serviços</a>
+      </div>
+      <div class="hero-tags">
+        <span class="tag"><i></i>Categoria A</span>
+        <span class="tag"><i></i>Categoria B</span>
+        <span class="tag"><i></i>Carro automático</span>
+        <span class="tag"><i></i>Reciclagem CNH</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="ring"></div>
+      <img src="assets/logo.png" alt="Emblema Auto Escola Novo Horizonte">
+      <div class="float-card fc-1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <div><b>Aprovados toda semana</b><small>Confira no Instagram</small></div>
+      </div>
+      <div class="float-card fc-2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6 17l1.5-5h9L18 17M8 12l1.5-4h5L16 12"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></div>
+        <div><b>Carro automático</b><small>Novidade na frota</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="stats" aria-label="Números">
+  <div class="container">
+    <div class="stats-grid reveal">
+      <div class="stat"><b>A &amp; B</b><span>Categorias de habilitação</span></div>
+      <div class="stat"><b>100%</b><span>Foco na sua aprovação</span></div>
+      <div class="stat"><b>1.6 mil+</b><span>Seguidores no Instagram</span></div>
+      <div class="stat"><b>Desde 1991</b><span>Formando condutores</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOBRE ================= -->
+<section class="about" id="sobre">
+  <div class="container">
+    <div class="about-visual reveal" aria-hidden="true">
+      <div class="sun"></div>
+      <div class="horizon-line"></div>
+      <div class="road"></div>
+      <div class="about-badge"><b>nh</b><small>Centro de Formação<br>de Condutores</small></div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Quem somos</span>
+      <h2>Um <em>novo horizonte</em> para a sua vida no trânsito</h2>
+      <p class="lead">Somos um Centro de Formação de Condutores em Maringá dedicado a transformar alunos em motoristas seguros e confiantes. Nosso trabalho vai além de passar na prova: queremos que você dirija com tranquilidade pelo resto da vida.</p>
+      <ul class="checklist">
+        <li>Instrutores pacientes, credenciados e experientes</li>
+        <li>Frota moderna e bem cuidada, incluindo carro automático</li>
+        <li>Acompanhamento em cada etapa do processo no DETRAN</li>
+        <li>Atendimento rápido e humano pelo WhatsApp</li>
+      </ul>
+      <a class="btn btn-dark" href="#contato">Venha nos conhecer</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVIÇOS ================= -->
+<section class="services" id="servicos">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Nossos serviços</span>
+      <h2>Tudo o que você precisa para <em>dirigir</em></h2>
+      <p class="lead">Do primeiro passo à habilitação na mão — escolha o serviço ideal para o seu momento.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <span class="pill">CAT. B</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-3l2-5h14l2 5v3H3Z"/><path d="M5 8l1.5-3h11L19 8"/><circle cx="7" cy="16.5" r="1.8"/><circle cx="17" cy="16.5" r="1.8"/></svg></div>
+        <h3>Primeira Habilitação – Carro</h3>
+        <p>Curso teórico, aulas práticas e preparação completa para o exame de direção da Categoria B.</p>
+        <a class="more" href="#contato">Quero começar →</a>
+      </article>
+      <article class="card reveal">
+        <span class="pill">CAT. A</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="16.5" r="3"/><circle cx="18.5" cy="16.5" r="3"/><path d="M5.5 16.5 9 9h5l4.5 7.5M14 9l-2-3h-2M9 9l3 7.5h3"/></svg></div>
+        <h3>Primeira Habilitação – Moto</h3>
+        <p>Aprenda a pilotar com segurança, com aulas em circuito e preparação para o exame prático da Categoria A.</p>
+        <a class="more" href="#contato">Quero começar →</a>
+      </article>
+      <article class="card reveal">
+        <span class="pill">A + B</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M6 16c.6-1.5 1.7-2.2 3-2.2s2.4.7 3 2.2M14.5 10h4M14.5 13h4"/></svg></div>
+        <h3>Habilitação A + B juntas</h3>
+        <p>Tire carro e moto no mesmo processo, otimizando tempo e investimento.</p>
+        <a class="more" href="#contato">Saber mais →</a>
+      </article>
+      <article class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/><circle cx="12" cy="12" r="10"/></svg></div>
+        <h3>Adição de Categoria</h3>
+        <p>Já tem CNH de carro ou moto? Adicione a outra categoria com aulas práticas direcionadas.</p>
+        <a class="more" href="#contato">Saber mais →</a>
+      </article>
+      <article class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg></div>
+        <h3>Reciclagem de Condutores</h3>
+        <p>Curso para quem está com a CNH suspensa ou cassada voltar a dirigir de forma regularizada.</p>
+        <a class="more" href="#cnh-suspensa">Entenda →</a>
+      </article>
+      <article class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Aulas para Habilitados</h3>
+        <p>Perdeu a confiança ao volante? Aulas para retomar a prática com calma e segurança.</p>
+        <a class="more" href="#contato">Agendar aula →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CARRO AUTOMÁTICO ================= -->
+<section class="auto" id="automatico">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Novidade</span>
+      <h2>Chegou <em>carro automático</em> na Novo Horizonte</h2>
+      <p class="lead">Aprenda e treine em um veículo elétrico e automático, moderno, silencioso e confortável. Ideal para quem quer ganhar confiança ou já pretende dirigir um carro automático no dia a dia.</p>
+      <div class="auto-features">
+        <div class="af"><b>100% elétrico</b><span>Silencioso e sem emissões</span></div>
+        <div class="af"><b>Câmbio automático</b><span>Foco total no trânsito</span></div>
+        <div class="af"><b>Tecnologia</b><span>Painel e assistentes modernos</span></div>
+        <div class="af"><b>Mais confiança</b><span>Aprendizado mais tranquilo</span></div>
+      </div>
+      <a class="btn btn-primary" href="https://wa.me/5544991468415?text=Ol%C3%A1!%20Quero%20saber%20sobre%20as%20aulas%20no%20carro%20autom%C3%A1tico." target="_blank" rel="noopener">Quero aula no automático</a>
+    </div>
+    <div class="car-art reveal" aria-hidden="true">
+      <div class="big-word">AUTO</div>
+      <svg viewBox="0 0 480 260">
+        <ellipse cx="240" cy="228" rx="200" ry="14" fill="#000" opacity=".45"/>
+        <path d="M40 180c0-22 10-36 34-42l52-12 46-40c12-10 26-14 42-14h92c18 0 32 6 44 18l34 36 40 8c22 4 36 20 36 40v20c0 8-6 14-14 14H54c-8 0-14-6-14-14v-14Z" fill="#8C9096"/>
+        <path d="M40 180c0-22 10-36 34-42l52-12 46-40c12-10 26-14 42-14h92c18 0 32 6 44 18l34 36 40 8c22 4 36 20 36 40" fill="none" stroke="#B8BCC2" stroke-width="3"/>
+        <path d="M50 160h390c4 8 6 14 6 20v14H44v-14c0-8 2-14 6-20Z" fill="#F5C518"/>
+        <path d="M50 172h390" stroke="#1a1a1a" stroke-width="3"/>
+        <path d="M150 126 186 94c8-7 18-10 28-10h40v42H150Z" fill="#20262E"/>
+        <path d="M272 84h40c14 0 24 4 32 12l28 30H272V84Z" fill="#20262E"/>
+        <text x="245" y="168" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="18" fill="#1a1a1a" letter-spacing="2">AUTOESCOLA</text>
+        <rect x="58" y="146" width="26" height="8" rx="4" fill="#FFF4D6"/>
+        <rect x="414" y="146" width="22" height="8" rx="4" fill="#E2412E"/>
+        <circle cx="128" cy="206" r="32" fill="#1a1a1a"/><circle cx="128" cy="206" r="16" fill="#9DA2A8"/><circle cx="128" cy="206" r="5" fill="#333"/>
+        <circle cx="368" cy="206" r="32" fill="#1a1a1a"/><circle cx="368" cy="206" r="16" fill="#9DA2A8"/><circle cx="368" cy="206" r="5" fill="#333"/>
+        <rect x="222" y="110" width="40" height="16" rx="3" fill="#F07B1A"/>
+        <text x="242" y="122" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#fff">nh</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMO FUNCIONA ================= -->
+<section class="how" id="como-funciona">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Passo a passo</span>
+      <h2>Como tirar sua <em>CNH</em> com a gente</h2>
+      <p class="lead">Um processo claro e acompanhado de perto, para você saber exatamente onde está e o que vem a seguir.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">1</div><h3>Matrícula</h3><p>Fale com a gente pelo WhatsApp ou venha à autoescola com seus documentos.</p></div>
+      <div class="step reveal"><div class="num">2</div><h3>Exames iniciais</h3><p>Exame médico e psicotécnico, com toda a orientação da nossa equipe.</p></div>
+      <div class="step reveal"><div class="num">3</div><h3>Teoria e prova</h3><p>Curso teórico e preparação para a prova de legislação de trânsito.</p></div>
+      <div class="step reveal"><div class="num">4</div><h3>Prática e aprovação</h3><p>Aulas práticas com instrutor e preparação para o exame de direção.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CNH SUSPENSA ================= -->
+<section class="suspensa" id="cnh-suspensa">
+  <div class="container">
+    <div class="suspensa-box reveal">
+      <div>
+        <span class="eyebrow">Reciclagem</span>
+        <h2>Sua CNH está suspensa ou cassada?</h2>
+        <p>Nós da Auto Escola Novo Horizonte podemos te ajudar! Oferecemos o curso de reciclagem e orientamos você em todo o processo para regularizar sua situação e voltar a dirigir.</p>
+        <a class="btn btn-dark" href="https://wa.me/5544991468415?text=Ol%C3%A1!%20Minha%20CNH%20est%C3%A1%20suspensa%2Fcassada%20e%20preciso%20de%20ajuda." target="_blank" rel="noopener">Quero regularizar minha CNH</a>
+      </div>
+      <ul class="suspensa-list">
+        <li>Curso de reciclagem para condutores</li>
+        <li>Orientação sobre prazos e documentos</li>
+        <li>Suporte em CNH suspensa e cassada</li>
+        <li>Atendimento sem burocracia</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DIFERENCIAIS ================= -->
+<section class="why-sec" id="diferenciais">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Por que a Novo Horizonte</span>
+      <h2>Mais segurança, mais confiança, <em>mais aprovação</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div><div><h3>Instrutores experientes</h3><p>Profissionais pacientes que respeitam o seu ritmo de aprendizado.</p></div></div>
+      <div class="why reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-3l2-5h14l2 5v3H3Z"/><circle cx="7" cy="16.5" r="1.8"/><circle cx="17" cy="16.5" r="1.8"/></svg></div><div><h3>Frota moderna</h3><p>Veículos revisados, confortáveis e com opção automática.</p></div></div>
+      <div class="why reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><h3>Horários flexíveis</h3><p>Agende suas aulas práticas nos horários que cabem na sua rotina.</p></div></div>
+      <div class="why reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-4-7.5L21 3v6h-6"/></svg></div><div><h3>Acompanhamento total</h3><p>Cuidamos de cada etapa no DETRAN para você não se perder.</p></div></div>
+      <div class="why reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div><div><h3>Condições especiais</h3><p>Facilidades no pagamento e campanhas promocionais ao longo do ano.</p></div></div>
+      <div class="why reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z"/></svg></div><div><h3>Atendimento humano</h3><p>Você fala com pessoas de verdade, prontas para tirar suas dúvidas.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= APROVADOS ================= -->
+<section class="approved" id="aprovados">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Aprovados</span>
+      <h2>Cada aprovação é uma <em>conquista</em> nossa também</h2>
+      <p class="lead">Toda semana celebramos alunos que saíram daqui com a CNH garantida. Acompanhe as aprovações, dicas para a sua CNH e as novidades da autoescola no nosso Instagram.</p>
+      <div class="ig-handle">
+        <div class="av"><img src="assets/logo.png" alt=""></div>
+        <div><b>@autonovohorizonte</b><small>Dicas, aprovados e condições especiais</small></div>
+      </div>
+      <a class="btn btn-primary" href="https://www.instagram.com/autonovohorizonte/" target="_blank" rel="noopener">Seguir no Instagram</a>
+    </div>
+    <div class="ig-grid reveal" aria-label="Destaques do Instagram">
+      <a class="ig-tile t1" href="https://www.instagram.com/autonovohorizonte/" target="_blank" rel="noopener"><span class="script">Aprovados</span>Novos motoristas<small>toda semana</small></a>
+      <a class="ig-tile t2" href="https://www.instagram.com/autonovohorizonte/" target="_blank" rel="noopener"><span class="t-num">A+B</span>Categorias<small>carro e moto</small></a>
+      <a class="ig-tile t3" href="https://www.instagram.com/autonovohorizonte/" target="_blank" rel="noopener">Dicas para sua CNH<small>mais segurança</small></a>
+      <a class="ig-tile t4" href="https://www.instagram.com/autonovohorizonte/" target="_blank" rel="noopener">Quantos anos você já adiou?<small>comece hoje</small></a>
+      <a class="ig-tile t5" href="https://www.instagram.com/autonovohorizonte/" target="_blank" rel="noopener"><span class="script">Aprovadas</span>Conquista desbloqueada<small>parabéns!</small></a>
+      <a class="ig-tile t6" href="https://www.instagram.com/autonovohorizonte/" target="_blank" rel="noopener">Condições especiais<small>fale com a gente</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2>Perguntas que <em>todo aluno</em> faz</h2>
+      <p class="lead">Não encontrou sua resposta? Chame no WhatsApp que a nossa equipe responde rapidinho.</p>
+      <a class="btn btn-dark" style="margin-top:26px" href="https://wa.me/5544991468415" target="_blank" rel="noopener">Tirar outra dúvida</a>
+    </div>
+    <div class="faq-list reveal">
+      <details open>
+        <summary>Quais documentos preciso para me matricular?</summary>
+        <p>Em geral: documento de identidade com foto, CPF e comprovante de residência. Na matrícula nossa equipe confere tudo e orienta sobre os próximos passos.</p>
+      </details>
+      <details>
+        <summary>Posso tirar carro e moto ao mesmo tempo?</summary>
+        <p>Sim! É possível fazer as Categorias A e B no mesmo processo, o que costuma economizar tempo e taxas.</p>
+      </details>
+      <details>
+        <summary>Posso fazer as aulas no carro automático?</summary>
+        <p>Sim. Temos carro automático na frota. Fale com a gente para entender como funcionam as aulas e o exame nessa modalidade.</p>
+      </details>
+      <details>
+        <summary>Minha CNH foi suspensa. Vocês ajudam?</summary>
+        <p>Ajudamos. Oferecemos o curso de reciclagem e orientamos sobre todo o processo para você regularizar a sua habilitação.</p>
+      </details>
+      <details>
+        <summary>Tenho medo de dirigir. A autoescola é para mim?</summary>
+        <p>Com certeza. Nossos instrutores trabalham com calma e no seu ritmo — e também oferecemos aulas para quem já é habilitado e quer recuperar a confiança.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTATO ================= -->
+<section class="contact" id="contato">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Contato</span>
+      <h2>Dê o primeiro passo <em>hoje</em></h2>
+      <p class="lead">Seu sonho está mais perto do que você imagina. Fale com a gente e garanta sua vaga.</p>
+      <div class="contact-items">
+        <a class="ci" href="https://wa.me/5544991468415" target="_blank" rel="noopener">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg></div>
+          <div><small>WhatsApp</small><b>(44) 99146-8415</b></div>
+        </a>
+        <a class="ci" href="tel:+554430348833">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+          <div><small>Telefone</small><b>(44) 3034-8833</b></div>
+        </a>
+        <div class="ci">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <div><small>Endereço</small><b>Av. Pedro Taques – Jd. Alvorada, Maringá – PR</b></div>
+        </div>
+      </div>
+    </div>
+
+    <form class="form reveal" id="leadForm">
+      <h3>Solicite seu orçamento</h3>
+      <p>Preencha e envie direto para o nosso WhatsApp.</p>
+      <div class="field"><label for="nome">Nome</label><input id="nome" name="nome" placeholder="Seu nome completo" required></div>
+      <div class="field"><label for="tel">Telefone</label><input id="tel" name="tel" type="tel" placeholder="(44) 9 0000-0000" required></div>
+      <div class="field"><label for="servico">Serviço de interesse</label>
+        <select id="servico" name="servico">
+          <option>Primeira habilitação – Carro (B)</option>
+          <option>Primeira habilitação – Moto (A)</option>
+          <option>Habilitação A + B</option>
+          <option>Adição de categoria</option>
+          <option>Reciclagem (CNH suspensa/cassada)</option>
+          <option>Aulas para habilitados</option>
+          <option>Aulas no carro automático</option>
+        </select>
+      </div>
+      <button class="btn" type="submit">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg>
+        Enviar pelo WhatsApp
+      </button>
+    </form>
+
+    <div class="map reveal">
+      <iframe title="Mapa – Auto Escola Novo Horizonte" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Auto+Escola+Novo+Horizonte+Av.+Pedro+Taques+Jardim+Alvorada+Maring%C3%A1+PR&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div>
+        <a href="#inicio" class="brand">
+          <img src="assets/logo.png" alt="" width="50" height="50">
+          <span><b>NOVO HORIZONTE</b><small>AUTO ESCOLA</small></span>
+        </a>
+        <p>Centro de Formação de Condutores em Maringá. Conquiste sua CNH com quem aprova de verdade!</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/autonovohorizonte/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/search/top?q=Auto%20Escola%20Novo%20Horizonte%20Maring%C3%A1" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7c0-.8.5-1 1-1h2V3h-3c-2.8 0-4 2-4 4v2H8v3h2v9h4v-9h2.7l.3-3h-3Z"/></svg></a>
+          <a href="https://wa.me/5544991468415" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#aprovados">Aprovados</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5544991468415" target="_blank" rel="noopener">WhatsApp: (44) 99146-8415</a></li>
+          <li><a href="tel:+554430348833">Fone: (44) 3034-8833</a></li>
+          <li>Av. Pedro Taques – Jd. Alvorada</li>
+          <li>Maringá – PR</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© <span id="ano"></span> Auto Escola Novo Horizonte. Todos os direitos reservados.</span>
+      <span>Categoria A · Categoria B · Reciclagem</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5544991468415?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg>
+</a>
+
+<script>
+  // Ano no rodapé
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  // Menu mobile
+  const nav = document.getElementById('nav'), menu = document.getElementById('menu'), burger = document.getElementById('burger');
+  burger.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    nav.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open'); nav.classList.remove('open'); burger.setAttribute('aria-expanded', false);
+  }));
+
+  // Animação ao rolar
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: .12 }) : null;
+  document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+
+  // Formulário -> WhatsApp
+  document.getElementById('leadForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target;
+    const msg = `Olá! Meu nome é ${f.nome.value.trim()}.\nTenho interesse em: ${f.servico.value}.\nMeu telefone: ${f.tel.value.trim()}`;
+    window.open('https://wa.me/5544991468415?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  });
+</script>
+</body>
+</html>
